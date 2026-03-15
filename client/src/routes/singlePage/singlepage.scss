@@ -1,0 +1,208 @@
+@use '../../responsive.scss' as *;
+@use '../../variables.scss' as *;
+
+.singlePage{
+    display: flex;
+    height: 100%;
+
+    @include md{
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+
+    .details{
+        flex: 3;
+        height: 100%;
+        overflow-y: scroll;
+
+        @include md{
+            flex: none;
+            height: auto;
+            overflow-y: visible;
+        }
+
+        .wrapper{
+            padding-right: 50px; 
+            
+            @include md{
+                padding-right: 0px;
+            }
+            
+            .info{
+
+                margin-top: 50px;
+
+                .top{
+
+                    display: flex;
+                    justify-content: space-between;
+
+                 .post{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    h1{
+                        font-weight: 400;
+                    }
+                    .address{
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        color: #888;
+                        font-size: 14px;
+
+                        img{
+                            height: 16px;
+                            width: 16px;
+                        }
+
+                    }
+                    .price{
+                        padding: 5px;
+                        background-color: $primary-color;
+                        border-radius: 5px;
+                        width: max-content;
+                        font-weight: 300;
+                        font-size: 20px; ;
+                    }
+                 }
+                 .user{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    padding: 0px 30px;
+                    border-radius: 10px;
+                    background-color: $primary-color;
+                    font-weight: 600;
+
+                    img{
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                 }   
+                }
+                .bottom{
+                    margin: 50px 0px;
+                    color: #555;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    .features{
+        flex: 2;
+        background-color: $bg-color;
+        height: 100%;
+        overflow-y: scroll;
+
+        @include md{
+            flex: none;
+            height: auto;
+            overflow-y: visible;
+        }
+
+        .wrapper{
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+
+            img{
+                height: 20px;
+                width: 20px;
+            }
+
+            .title{
+                font-weight: bold;
+                font-size: 20px;
+                margin-bottom: 10px;
+                margin-left: 30px;
+            }
+            .feature{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                img{
+                    background-color: blanchedalmond;
+                }
+
+                .featureText{
+                    span{
+                        font-weight: bold;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+            .listVertical{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 20px 10px;
+                background-color: #fff;
+                border-radius: 10px;
+                
+            }
+            .listHorizontal{
+                display: flex;
+                justify-content: space-around;
+                gap: 10px;
+                padding: 20px 10px;
+                background-color: #fff;
+                border-radius: 10px;
+            }
+
+            .sizes{
+                display: flex;
+                justify-content: space-around;
+                
+                @include lg{
+                    font-size: 12px;
+                }
+
+                .size{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 10px;
+                    background-color: #fff;
+                    border-radius: 10px;
+                }
+            }
+
+            .mapContainer{
+                width: 100%;
+                height: 200px;   
+            }
+
+            .buttons{
+                display: flex;
+                justify-content: space-around;
+                gap: 10px;
+                button{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    padding: 20px;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    border: 3px solid $primary-color;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: #0303ff;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

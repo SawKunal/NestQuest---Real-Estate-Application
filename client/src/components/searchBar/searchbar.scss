@@ -1,0 +1,79 @@
+@use "../../responsive.scss" as *;
+@use "../../variables.scss" as *;
+.searchBar{
+    
+    .type{
+        // margin-bottom: 1px;
+        button{
+            padding: 16px 36px ;
+            border: 1px solid #999;
+            border-bottom: none;
+            cursor: pointer;
+            text-transform: capitalize;
+
+            &.active{
+                background-color: #000000;
+                color: #fff;
+            }
+
+            &:first-child{
+                border-top-left-radius: 8px;
+                border-right: none;
+            }
+
+            &:last-child{
+                border-top-right-radius: 8px;
+                border-left: none;
+            }
+        }
+    }
+
+    form{
+        border: 1px solid #999;
+        display: flex;
+        justify-content: space-between;
+        height: 64px;
+        gap: 1px;
+
+        @include sm{
+            flex-direction: column;
+            border: none;
+            gap: 0;
+        }
+
+        input{
+            border: none;
+            padding: 0px 10px;
+            // width:160px;
+            flex: 1;
+
+            @include lg{                
+                padding: 0px 5px;                
+            }
+
+            @include sm{
+                padding: 20px;
+                border: 1px solid #999;
+            }
+        }
+
+        button{
+            border: none;
+            cursor: pointer;
+            background-color: $primary-color;
+            flex: 1;
+            width: 64px;
+
+            @include sm{
+                width: auto;
+                height: auto;
+                padding: 10px;
+            }
+
+            img{
+                height: 24px;
+                width: 24px;
+            }
+        }
+    }
+}

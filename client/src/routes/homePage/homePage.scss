@@ -1,0 +1,87 @@
+@use "../../responsive.scss" as *;
+@use "../../variables.scss" as *;
+
+.homePage{
+    display: flex;
+    height: 100%;
+
+    .textContainer{
+        flex: 3;
+        .wrapper{
+            padding: 50px 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            // align-items: center;
+            gap: 30px;
+            height: 100%;
+
+            @include md{
+                padding: 0;
+            }
+
+            @include sm{
+                justify-content: flex-start;
+            }
+
+            .title{
+                font-size: 60px;
+
+                @include lg{
+                    font-size: 50px;
+                }
+            }
+
+            .boxes{
+                display: flex;
+                justify-content: space-between;
+
+                @include sm{
+                    display: none;
+                }
+
+                .box{
+                    h1{
+                        font-size: 36px;
+
+                        @include lg{
+                            font-size: 28px;
+                        }
+                    }
+                    h2{
+                        font-size: 20px;
+                        font-weight: 300;
+                    }
+                }   
+            }
+        }   
+    }
+
+    .imgContainer{
+        flex: 2;
+        background-color: $bg-color;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        @include md{
+            position: absolute;
+            top:0;
+            left:0;
+            z-index: -1;
+            width: 100%;
+            filter: blur(5px);
+            // display: none;
+        }
+
+        img{
+            width: 115%;
+            position: absolute;
+            right: 0;
+
+            @include lg{
+                width: 105%;
+            }
+        }
+    }
+}

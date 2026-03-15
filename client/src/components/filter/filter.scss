@@ -1,0 +1,56 @@
+@use "../../variables.scss" as *;
+.filter{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    h1{
+        font-weight: 300;
+        font-size: 24px;
+    }
+
+    .item{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+
+        label{
+            font-size: 10px;
+        }
+        input, select{
+            width: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    }
+
+    .top{
+        input{
+            width: 100%;
+
+        }
+    }
+
+    .bottom{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+
+        button{
+            width: 100px;
+            padding: 10px;
+            background-color: $primary-color;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+            img{
+                height: 24px;
+                width: 24px;
+            }
+        }
+
+    }
+}
