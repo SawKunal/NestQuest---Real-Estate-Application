@@ -55,7 +55,7 @@ The project is organized into three main components:
 1.  **Clone the repository**
 
     ```bash
-    git clone https://github.com/perilousTF/NestQuest
+    git clone https://github.com/SawKunal/NestQuest---Real-Estate-Application
     cd NestQuest
     ```
 
