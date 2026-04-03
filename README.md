@@ -1,6 +1,6 @@
 # NestQuest - Real Estate Application
 
-NestQuest is a robust full-stack real estate application designed for seamless property browsing, listing, and direct communication. It features an intuitive user interface, interactive maps for location visualization, 
+NestQuest is a robust full-stack real estate application designed for seamless property browsing, listing, and direct communication. It features an intuitive user interface, interactive maps for location visualization, and real-time chat functionality for instant engagement between users and agents.
 
 ## Features
 
